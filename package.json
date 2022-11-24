@@ -1,0 +1,12 @@
+{
+    "name": "github-pr",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "devDependencies": {
+        "@octokit/core": "^4.1.0"
+    }
+}
