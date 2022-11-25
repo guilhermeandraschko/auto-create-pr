@@ -5,7 +5,7 @@ const getBodyText = (configvars) => {
     if (bodytemplate && bodytemplate == 'true') {
         return fs.readFileSync('body-template.txt', 'utf-8');
     } else {
-        return `${branch} ${configvars.get('body')}`;
+        return `${configvars.get('body')}`;
     }
 }
 
