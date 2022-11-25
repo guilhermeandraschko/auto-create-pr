@@ -15,7 +15,11 @@ Let's automate this and just run a command line.
 <p>repo = v-platform</p>
 <p>body = This pull request is a test!</p>
 <p>base = master</p>
-<p>token = [your personal access token]</p></pre>
+<p>token = [your personal access token]</p>
+<p>bodytemplate = true</p></pre>
+
+body template set to true means you will use the body-template.txt as body of your pr
+
 - Run npm `npm start branch-name`
 
 Ps: Your branch must be pushed and it must have at least one commit

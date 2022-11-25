@@ -1,31 +1,27 @@
 import { Octokit } from "@octokit/core";
-import * as fs from "fs";
-
-const readConfigFile = () => {
-    const configFile = fs.readFileSync('.config', 'utf-8');
-    const lines = configFile.split('\n');
-    return lines.reduce((argsmap, line) => {
-            let argmap = line.split('=');
-            let key = argmap[0]?.trim();
-            let value = argmap[1]?.trim();
-            argsmap.set(key, value);
-            return argsmap;
-        }, new Map());
-}
+import getBodyText from "./get-body-text.js";
+import getCommandLineArgs from "./get-command-line-args.js";
+import readConfigFile from "./read-config-file.js";
 
 console.log('reading config file ...');
 const configvars = readConfigFile();
 console.log('done.');
 
-const args = process.argv.slice(2);
+console.log('reading command line args ...');
+const args = getCommandLineArgs();
 const branch = args[0];
+console.log('done.');
+
+console.log('getting body PR text ...');
+const bodytext = getBodyText(configvars);
+console.log('done.');
 
 console.log('creating pr...');
 const octokit = new Octokit({ auth: configvars.get('token') }),
         owner = configvars.get('owner'),
          repo = configvars.get('repo'),
         title = `[${branch || 'PR'}]`,
-        body  = `${branch} ${configvars.get('body')}`,
+        body  = `${bodytext}`,
         head  = `${branch}`,
         base  = configvars.get('base');
 try {
@@ -36,3 +32,4 @@ try {
 } catch(e) {
     console.log('failed. Response ' + e.message);
 }
+
