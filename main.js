@@ -1,6 +1,7 @@
 import { Octokit } from "@octokit/core";
 import getBody from "./get-body.js";
 import getCommandLineArgs from "./get-command-line-args.js";
+import getJiraBodyVars from "./get-jira-body-vars.js";
 import readConfigFile from "./read-config-file.js";
 
 console.log('reading config file ...');
@@ -13,14 +14,15 @@ const branch = args[0];
 console.log('done.');
 
 console.log('rendering body template ...');
-const bodyy = await getBody(branch, configvars);
+const bodyvars = await getJiraBodyVars(branch, configvars);
+const bodyy = await getBody(configvars, bodyvars);
 console.log('done.');
 
 console.log('creating pr...');
 const octokit = new Octokit({ auth: configvars.get('token') }),
         owner = configvars.get('owner'),
          repo = configvars.get('repo'),
-        title = `[${branch || 'PR'}]`,
+        title = `[${branch + " - " + bodyvars.description + "]" || 'PR'}`,
         body  = `${bodyy}`,
         head  = `${branch}`,
         base  = configvars.get('base');
