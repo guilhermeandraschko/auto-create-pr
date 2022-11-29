@@ -10,13 +10,20 @@ console.log('done.');
 
 console.log('reading command line args ...');
 const args = getCommandLineArgs();
-const branch = args[0];
-const draftarg = args[1];
+let branch = args[0], jiracard, draftarg;
+if (args.length == 3) {
+    jiracard = args[1]
+    draftarg = args[2];
+} else {
+    jiracard = branch;
+    draftarg = args[1];
+}
+
 const isdraft = draftarg == 'draft' ? true : false;
 console.log('done.');
 
 console.log('rendering body template ...');
-const bodyvars = await getJiraBodyVars(branch, configvars);
+const bodyvars = await getJiraBodyVars(jiracard, configvars);
 const bodyy = await getBody(configvars, bodyvars);
 console.log('done.');
 
@@ -27,7 +34,7 @@ try {
     const { data: pullRequest } = await octokit.rest.pulls.create({
         owner: configvars.get('owner'),
         repo: configvars.get('repo'),
-        title: `[${branch + " - " + bodyvars.description + "]" || 'PR'}`,
+        title: `[${jiracard + " - " + bodyvars.description + "]" || 'PR'}`,
         body: `${bodyy}`,
         head: `${branch}`,
         base: configvars.get('base'),
