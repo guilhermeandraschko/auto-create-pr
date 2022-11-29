@@ -9,7 +9,8 @@ Whenever you finish your work, you want to open a PR. You have to go to github p
 
 ### Goal
 
-Automate the process of creating PR by integrating with JIRA API. Type just one command and get it all done like this:
+- Standardize Pull Requests on GitHub
+- Simplify Pull Request creation, by typing one command and getting this result:
 
 <img width="614" alt="image" src="https://user-images.githubusercontent.com/56555440/204580031-971c9b5f-f32d-4fea-b106-744cd88b6e0b.png">
 
