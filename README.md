@@ -1,7 +1,7 @@
 
 ### Audience
 
-People that uses github and JIRA.
+People that uses Github and JIRA.
 
 ### Context
 
