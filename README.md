@@ -24,7 +24,7 @@ body template set to true means you will use the body-template.txt as body of yo
 
 Ps: Your branch must be pushed and it must have at least one commit
 
-### Running from terminal (Mac OS)
+### Running from any terminal (Mac OS)
 
 - clone the repo somewhere (your-folder)
 - open the `vi ~/.bash_profile` and add this line `alias createpr="cd ~/your-folder/github-pr && npm start $1"`

@@ -1,5 +1,5 @@
 import { Octokit } from "@octokit/core";
-import getBodyText from "./get-body-text.js";
+import getBody from "./get-body.js";
 import getCommandLineArgs from "./get-command-line-args.js";
 import readConfigFile from "./read-config-file.js";
 
@@ -12,8 +12,8 @@ const args = getCommandLineArgs();
 const branch = args[0];
 console.log('done.');
 
-console.log('getting body PR text ...');
-const bodytext = getBodyText(configvars);
+console.log('rendering body template ...');
+const bodyy = await getBody(branch, configvars);
 console.log('done.');
 
 console.log('creating pr...');
@@ -21,7 +21,7 @@ const octokit = new Octokit({ auth: configvars.get('token') }),
         owner = configvars.get('owner'),
          repo = configvars.get('repo'),
         title = `[${branch || 'PR'}]`,
-        body  = `${bodytext}`,
+        body  = `${bodyy}`,
         head  = `${branch}`,
         base  = configvars.get('base');
 try {
