@@ -30,8 +30,14 @@ Notes:
 1. *Body template* set to true means you will use the body-template.md as body of your pr instead of *body* value
 2. This .config file is hidden, nobody else besides yourself can see it because it was added on .gitignore.
 
-- Run npm `npm start branch-name`
+- Run npm `npm start branch-name [jira-card-id] [draft]`
 
+Notes: 
+1. Square brackets means they are optional.
+2. Case your branch name matches the jira card id, just run (`npm start branch-name`)
+3. Case you want it to be draft, just run (`npm start branch-name draft`)
+
+Case you wish the PR to be draft
 Conditions: 
 1. Your branch must be pushed
 2. It must have at least one commit
