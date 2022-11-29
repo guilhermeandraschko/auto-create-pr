@@ -4,9 +4,10 @@ const getJiraBodyVars = async (branch, configvars) => {
    
     const jirauser = configvars.get('jirauser');
     const jiraapitoken = configvars.get('jiraapitoken');
+    const jiracompany = configvars.get('jiracompany');
     const config = {
         method: 'get',
-        url: `https://vaktglobal.atlassian.net/rest/agile/1.0/issue/${branch}?fields=key&fields=summary&fields=description&fields=issuetype`,
+        url: `https://${jiracompany}.atlassian.net/rest/agile/1.0/issue/${branch}?fields=key&fields=summary&fields=description&fields=issuetype`,
         headers: { 
         'Accept-Encoding': 'identity' 
         },

@@ -18,7 +18,8 @@ Let's automate this and just run a command line. The result will be the PR with 
 <p>token = [your personal access token for github]</p>
 <p>bodytemplate = true</p>
 <p>jirauser = [your jira user (normally it's the email)]</p>
-<p>jiraapitoken = [your JIRA api token -> https://id.atlassian.com/manage-profile/security/api-tokens > create new]</p></pre>
+<p>jiraapitoken = [your JIRA api token -> https://id.atlassian.com/manage-profile/security/api-tokens > create new]</p>
+<p>jiracompany = [your company host name on jira]</p></pre>
 
 body template set to true means you will use the body-template.txt as body of your pr
 
