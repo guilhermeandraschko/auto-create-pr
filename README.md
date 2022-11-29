@@ -1,11 +1,16 @@
 ### Context
 
-Whenever you finish your work, you want to open a PR. You have to go to github pr section > create new > select base and head branch > add title and a body > create.
+Whenever you finish your work, you want to open a PR. You have to go to github pr section and after many clicks you have PR opened. You have to go to JIRA dashboard and copy many information from there to fill your PR.
 
 ### Goal
 
-Let's automate this and just run a command line. The result will be the PR with the body-template.md as default.
-The PR will be filled with the JIRA card information.
+Automate the process of creating PR by integrating with JIRA API. Type just one command and get it all done like this:
+
+<img width="614" alt="image" src="https://user-images.githubusercontent.com/56555440/204580031-971c9b5f-f32d-4fea-b106-744cd88b6e0b.png">
+
+### Targeted audience
+
+People that uses github and JIRA.
 
 ### Instructions
 
