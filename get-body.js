@@ -1,8 +1,10 @@
 import * as fs from "fs";
 import Mustache from "mustache";
 
-const getBodyText = () => {
-    return fs.readFileSync('body-template.md', 'utf-8');
+const getBodyText = (configvars) => {
+    const bodytemplatename = configvars.get('bodytemplatename');
+    
+    return fs.readFileSync(bodytemplatename ? bodytemplatename : 'body-template.md', 'utf-8');
 }
 
 const getBody = (configvars, bodyvars) => {

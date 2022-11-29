@@ -23,13 +23,15 @@ Automate the process of creating PR by integrating with JIRA API. Type just one 
 <span>base = master</span>
 <span>token = [your personal access token for github, see https://github.com/settings/tokens]</span>
 <span>bodytemplate = true</span>
+<span>bodytemplatename = custom-body-template.md</span>
 <span>jirauser = [your jira login, ex: your-name@company.com]</span>
 <span>jiraapitoken = [your JIRA api token, create one on https://id.atlassian.com/manage-profile/security/api-tokens]</span>
 <span>jiracompany = [your company host name on jira]</span></pre>
 
 Notes:
-1. *Body template* set to true means you will use the body-template.md as body of your pr instead of *body* value
+1. **Body template** set to true means you will use the **bodytemplatename** as body of your pr instead of *body* value
 2. This .config file is hidden, nobody else besides yourself can see it because it was added on .gitignore.
+3. You can add any template you wish, you can just change the **bodytemplatename**.
 
 - Run npm `npm start branch-name [jira-card-id] [draft]`
 
