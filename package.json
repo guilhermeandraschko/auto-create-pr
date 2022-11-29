@@ -8,6 +8,7 @@
     },
     "devDependencies": {
         "@octokit/core": "^4.1.0",
+        "@octokit/rest": "^19.0.5",
         "axios": "^1.2.0",
         "fetch": "^1.1.0",
         "mustache": "^4.2.0"
