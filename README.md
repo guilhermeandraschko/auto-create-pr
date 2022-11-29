@@ -16,21 +16,25 @@ People that uses github and JIRA.
 
 - Install npm
 - Create a file called '.config' with this content:
-<pre><p>owner = squad</p>
-<p>repo = project</p>
-<p>body = This pull request is a test!</p>
-<p>base = master</p>
-<p>token = [your personal access token for github]</p>
-<p>bodytemplate = true</p>
-<p>jirauser = [your jira user (normally it's the email)]</p>
-<p>jiraapitoken = [your JIRA api token -> https://id.atlassian.com/manage-profile/security/api-tokens > create new]</p>
-<p>jiracompany = [your company host name on jira]</p></pre>
+<pre><span>owner = squad</span>
+<span>repo = project</span>
+<span>body = the body of the PR</span>
+<span>base = master</span>
+<span>token = [your personal access token for github]</span>
+<span>bodytemplate = true</span>
+<span>jirauser = [your jira login]</span>
+<span>jiraapitoken = [your JIRA api token, create one on https://id.atlassian.com/manage-profile/security/api-tokens]</span>
+<span>jiracompany = [your company host name on jira]</span></pre>
 
-body template set to true means you will use the body-template.md as body of your pr
+Notes:
+1. *Body template* set to true means you will use the body-template.md as body of your pr instead of *body* value
+2. This .config file is hidden, nobody else besides yourself can see it because it was added on .gitignore.
 
 - Run npm `npm start branch-name`
 
-Ps: Your branch must be pushed and it must have at least one commit
+Conditions: 
+1. Your branch must be pushed
+2. It must have at least one commit
 
 ### Running from any terminal (Mac OS)
 
