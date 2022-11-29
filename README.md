@@ -22,7 +22,7 @@ People that uses github and JIRA.
 <span>base = master</span>
 <span>token = [your personal access token for github, see https://github.com/settings/tokens]</span>
 <span>bodytemplate = true</span>
-<span>jirauser = [your jira login]</span>
+<span>jirauser = [your jira login, ex: your-name@company.com]</span>
 <span>jiraapitoken = [your JIRA api token, create one on https://id.atlassian.com/manage-profile/security/api-tokens]</span>
 <span>jiracompany = [your company host name on jira]</span></pre>
 
