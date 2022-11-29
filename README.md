@@ -4,7 +4,7 @@ Whenever you finish your work, you want to open a PR. You have to go to github p
 
 ### Goal
 
-Let's automate this and just run a command line. The result will be the PR with the desired template.
+Let's automate this and just run a command line. The result will be the PR with the body-template.md as default.
 
 
 ### Instructions
