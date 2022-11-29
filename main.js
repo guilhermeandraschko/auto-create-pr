@@ -9,17 +9,8 @@ const configvars = readConfigFile();
 console.log('done.');
 
 console.log('reading command line args ...');
-const args = getCommandLineArgs();
-let branch = args[0], jiracard, draftarg;
-if (args.length == 3) {
-    jiracard = args[1]
-    draftarg = args[2];
-} else {
-    jiracard = branch;
-    draftarg = args[1];
-}
-
-const isdraft = draftarg == 'draft' ? true : false;
+const {branch, jiracard, draft} = getCommandLineArgs();
+const isdraft = draft == 'draft' ? true : false;
 console.log('done.');
 
 console.log('rendering body template ...');
