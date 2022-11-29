@@ -26,7 +26,7 @@ People that uses github and JIRA.
 <p>jiraapitoken = [your JIRA api token -> https://id.atlassian.com/manage-profile/security/api-tokens > create new]</p>
 <p>jiracompany = [your company host name on jira]</p></pre>
 
-body template set to true means you will use the body-template.txt as body of your pr
+body template set to true means you will use the body-template.md as body of your pr
 
 - Run npm `npm start branch-name`
 
