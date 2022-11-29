@@ -1,11 +1,11 @@
 
 ### Audience
 
-People that uses Github and JIRA.
+- People that uses Github and JIRA.
 
 ### Context
 
-Whenever you finish your work, you want to open a PR. You have to go to github pr section and after many clicks you have PR opened. You have to go to JIRA dashboard and copy many information from there to fill your PR.
+- Whenever you finish your work, you want to open a PR. You have to go to github pr section and after many clicks you have PR opened. You have to go to JIRA dashboard and copy many information from there to fill your PR.
 
 ### Goal
 
