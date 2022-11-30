@@ -1,18 +1,17 @@
 
+
 ### Audience
 
 - People that uses GitHub and JIRA.
 
 ### Context
 
-- Whenever you finish your work, you want to open a PR. You have to go to github pr section and after many clicks you have PR opened. You have to go to JIRA dashboard and copy many information from there to fill your PR.
+- Whenever you finish your work, you want to open a PR. You have to go to github pr section and after many clicks you have PR opened. You have to go to JIRA dashboard and copy some information from there to fill your PR.
 
 ### Goal
 
 - Standardize Pull Requests on GitHub
 - Simplify Pull Request creation, by typing one command and getting this result:
-
-<img width="614" alt="image" src="https://user-images.githubusercontent.com/56555440/204580031-971c9b5f-f32d-4fea-b106-744cd88b6e0b.png">
 
 ### Instructions
 
@@ -52,3 +51,9 @@ Notes:
 3. Square brackets means they are optional.
 4. Case your branch name matches the jira card id, just run (`npm start branch-name`)
 5. Case you want it to be draft, just run (`npm start branch-name draft`)
+
+### Star ☆ the repo to increase the engagement
+- Thank you
+
+
+https://user-images.githubusercontent.com/56555440/204678256-78a6d6a2-69ef-49dc-815c-7c7fb70e58d1.mov
