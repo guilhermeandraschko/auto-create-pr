@@ -55,7 +55,7 @@ Notes:
 5. Case you want it to be draft, just run (`npm start branch-name draft`)
 
 ### Star ☆ the repo to increase the engagement
-- Thank you
-
 
 https://user-images.githubusercontent.com/56555440/204678256-78a6d6a2-69ef-49dc-815c-7c7fb70e58d1.mov
+
+- Thank you
