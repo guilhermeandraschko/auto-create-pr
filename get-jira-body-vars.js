@@ -7,7 +7,7 @@ const getJiraBodyVars = async (branch, configvars) => {
     const jiracompany = configvars.get('jiracompany');
     const config = {
         method: 'get',
-        url: `https://${jiracompany}.atlassian.net/rest/agile/1.0/issue/${branch}?fields=key&fields=summary&fields=description&fields=issuetype`,
+        url: `https://${jiracompany}.atlassian.net/rest/agile/1.0/issue/${branch}?fields=key&fields=summary&fields=description&fields=issuetype&fields=assignee`,
         headers: { 
         'Accept-Encoding': 'identity' 
         },
@@ -23,11 +23,13 @@ const getJiraBodyVars = async (branch, configvars) => {
     const isbug = fields?.issuetype?.name === 'Bug';
     const bug = isbug ? "x" : " ";
     const feature = !isbug ? "x" : " ";
+    const assignee = fields?.assignee?.displayName;
     const bodyvars = {
         link: `[JIRA ${branch}](https://vaktglobal.atlassian.net/browse/${branch})`,
         description: `${description}`,
         bug: `${bug}`,
-        feature: `${feature}`
+        feature: `${feature}`,
+        assignee: `${assignee}`
     }
     return bodyvars;
 }

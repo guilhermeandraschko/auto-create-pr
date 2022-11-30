@@ -25,7 +25,7 @@ try {
     const { data: pullRequest } = await octokit.rest.pulls.create({
         owner: configvars.get('owner'),
         repo: configvars.get('repo'),
-        title: `[${jiracard + " - " + bodyvars.description + "]" || 'PR'}`,
+        title: `[${bodyvars.assignee}][${jiracard + "] - " + bodyvars.description || 'PR'}`,
         body: `${bodyy}`,
         head: `${branch}`,
         base: configvars.get('base'),
