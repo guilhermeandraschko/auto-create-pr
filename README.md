@@ -1,8 +1,10 @@
-
+<p align="center">
+  <img width="500" alt="GitHub and Jira" src="https://user-images.githubusercontent.com/56555440/204679533-9fcb43f2-8e1e-4595-ad05-28c67d7e5e94.png">
+</p>
 
 ### Audience
 
-- People that uses GitHub and JIRA.
+- People that uses GitHub and JIRA. (See the video on the bottom)
 
 ### Context
 
