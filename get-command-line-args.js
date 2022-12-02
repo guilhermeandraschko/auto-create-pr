@@ -9,7 +9,7 @@ const get2ParamsCase = (argsarray) => {
 const getCommandLineArgs = () => {
     const argsarray = process.argv.slice(2);
     switch (argsarray.length) {
-        case 2: get2ParamsCase(argsarray);
+        case 2: return get2ParamsCase(argsarray);
         case 3: return {branch: argsarray[0], jiracard: argsarray[1], draft: argsarray[2]};
         default: return {branch: argsarray[0], jiracard: argsarray[0], draft: null};
     }
