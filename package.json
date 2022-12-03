@@ -1,16 +1,18 @@
 {
     "name": "github-pr",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "private": true,
     "type": "module",
     "scripts": {
-        "start": "node main.js"
+        "start": "node main.js",
+        "test": "node get-command-line-args-test.js"
     },
     "devDependencies": {
         "@octokit/core": "^4.1.0",
         "@octokit/rest": "^19.0.5",
         "axios": "^1.2.0",
         "fetch": "^1.1.0",
+        "lodash": "^4.17.21",
         "mustache": "^4.2.0"
     }
 }

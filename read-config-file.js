@@ -7,9 +7,8 @@ import * as fs from "fs";
             let argmap = line.split('=');
             let key = argmap[0]?.trim();
             let value = argmap[1]?.trim();
-            argsmap.set(key, value);
-            return argsmap;
-        }, new Map());
+            return {...argsmap, [key]: value};
+        }, {});
 }
 
 export default readConfigFile;
