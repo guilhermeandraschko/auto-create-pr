@@ -21,7 +21,7 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] End-to-End test
 - [ ] New/Updated unit tests
 
-# Screenshots
+# Test evidences
 
 - [ ] API
 
@@ -31,6 +31,15 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 
    Please Attach the evidences here
 
+# Xray cards
+
+- [ ] Added
+
+   Please list added xray cards
+
+- [ ] Deprecated
+
+   Please list deprecated xray cards
 
 # Checklist:
 
