@@ -23,11 +23,15 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 
 # Test evidences
 
-- [ ] API
+- [ ] Unit Tests
 
    Please Attach the evidences here
 
-- [ ] Cucumber
+- [ ] Dev Api Tests
+
+   Please Attach the evidences here
+
+- [ ] Cucumber Tests
 
    Please Attach the evidences here
 
