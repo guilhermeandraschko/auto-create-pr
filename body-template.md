@@ -6,10 +6,14 @@
 
 {{ description }}
 
+# Checklist:
+
+- [ ] The work related with the jira ticket(s) is complete, i.e. developed, tested, signed off (Select this option, if applicable)
+
 ## Type of change
 
-- [{{ bug }}] Bug fix (non-breaking change which fixes an issue)
-- [{{ feature }}] Enhancement (non-breaking change which adds functionality)
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] Enhancement (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
 
@@ -20,6 +24,8 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] API test
 - [ ] End-to-End test
 - [ ] New/Updated unit tests
+- [ ] Jenkins pipeline runs
+- [ ] Other
 
 # Test evidences
 
@@ -35,6 +41,10 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 
    Please Attach the evidences here
 
+- [ ] Other Tests (Pipelines, CPU/Memory monitoring, etc...)
+
+   Please Attach the evidences here
+
 # Xray cards
 
 - [ ] Added
@@ -44,11 +54,3 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] Deprecated
 
    Please list deprecated xray cards
-
-# Checklist:
-
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
