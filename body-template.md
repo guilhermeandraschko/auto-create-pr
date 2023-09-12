@@ -1,3 +1,7 @@
+# Merge Type
+- [ ] Squash And Merge
+- [ ] Rebase And Merge
+
 # Ticket
 
 {{ link }}
@@ -10,7 +14,7 @@
 
 - [ ] The work related with the jira ticket(s) is complete, i.e. developed, tested, signed off (Select this option, if applicable)
 
-## Type of change
+# Type of change
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] Enhancement (non-breaking change which adds functionality)
